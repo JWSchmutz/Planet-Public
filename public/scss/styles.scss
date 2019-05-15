@@ -1,0 +1,20 @@
+$theme-colors: (
+  "main": rgb(33, 148, 228)
+);
+
+a {
+  .card {
+    .card-body {
+      background-color: rgb(33, 148, 228);
+    }
+  }
+}
+
+a {
+  .card {
+    .card-body:hover {
+      background-color: white;
+    }
+  }
+}
+@import "node_modules/bootstrap/scss/bootstrap";

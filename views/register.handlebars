@@ -1,0 +1,58 @@
+<div class="sign-up-body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-main">
+        <h1 class="display-4 text-white title">
+            <i class="fas fa-globe-americas"></i> <span id="title"> Planet Together</span>
+        </h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <div class="button-holder ml-auto text-white"> Already have an account? &nbsp;
+                <button type="button" class="btn btn-outline-main btn-light" id="toLogin">
+                    Login
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="card" style="width: 18rem;" id="sign-up-card">
+        <div class="card-header bg-main text-white">
+            Sign-up
+        </div>
+        <div class="card-body">
+            <form action='/users/register' method="POST">
+                <div class="form-group">
+                    <label for="sign-up-email">Email Address</label>
+                    <input type="email" name="email" class="form-control" id="sign-up-email"
+                        aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                        anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="sign-up-username">Username (How your friends will see you)</label>
+                    <input class="form-control" type="name" name="username" placeholder="John Doe"
+                        id="sign-up-username">
+
+                </div>
+                <div class="form-group">
+                    <label for="sign-up-pass">Password</label>
+                    <input type="password" name="password" class="form-control" id="sign-up-pass"
+                        placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="sign-up-pass-confirm">Confirm Password</label>
+                    <input type="password" name="passwordConfirm" class="form-control" id="sign-up-pass-confirm"
+                        placeholder="Password">
+                </div>
+                <div id="error-message"></div>
+                <a href="#"><button type="submit" class="btn btn-main" id="sign-up-button">Sign
+                        Up</button></a>
+            </form>
+
+        </div>
+    </div>
+</div>

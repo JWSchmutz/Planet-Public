@@ -1,0 +1,75 @@
+<div class="dashboard-body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-main">
+        <h1 class="display-4 text-white title">
+            <i class="fas fa-globe-americas"></i> <span id="title"> Planet Together</span>
+        </h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <div class="button-holder ml-auto">
+                <span>Welcome {{username}}</span>
+                <a type="button" href="/users/logout" class="btn btn-outline-main btn-light" id="logout-button">
+                    Logout
+                </a> </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-main text-white">
+                <h4><strong>Tell us about your trip.</strong></h4>
+            </div>
+            <div class="card-body">
+                <form action="/api/events" method="post">
+                    <div class="form-group">
+                        <label for="location"><strong>Location</strong></label>
+                        <input type="text" class="form-control" id="location-input" placeholder="Tokyo Japan"
+                            name="location" />
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-6"> <label for="arrive"><strong>Arrive Date</strong></label>
+                            </div>
+                            <div class="col-6"> <label for="leave"><strong>Leave Date</strong></label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="date" name="arrive" class="form-control" id="arrive">
+                            </div>
+                            <div class="col-6">
+                                <input type="date" name="leave" class="form-control" id="leave">
+                            </div>
+                        </div>
+                    </div>
+                    <label for="check-boxes"><strong>Which events interest your group?</strong></label>
+
+                    <div class="form-group form-check">
+
+                        <input type="checkbox" class="form-check-input" checked="checked" id="outdoor-check"
+                            name="outdoor">
+                        <label class="form-check-label" for="exampleCheck1"><strong>
+                                <h3>Outdoor</h3>
+                            </strong></label>
+                        <br>
+                        <input type="checkbox" class="form-check-input" checked="checked" id="sports-check"
+                            name="sports">
+                        <label class="form-check-label" for="exampleCheck1"><strong>
+                                <h3>Sports</h3>
+                            </strong></label>
+                        <br>
+                        <input type="checkbox" class="form-check-input" checked="checked" id="music-check" name="music">
+                        <label class="form-check-label" for="exampleCheck1"><strong>
+                                <h3>Music</h3>
+                            </strong></label>
+
+                    </div>
+                    <button type="submit" class="btn btn-main" id="submit-button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

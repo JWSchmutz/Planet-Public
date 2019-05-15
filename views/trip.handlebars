@@ -1,0 +1,142 @@
+<div class="trip-body">
+    <nav class="navbar navbar-expand-lg navbar-light bg-main">
+        <h1 class="display-4 text-white title">
+            <i class="fas fa-globe-americas"></i> <span id="title"> Planet Together</span>
+        </h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <div class="button-holder ml-auto">
+                {{!-- <span>Welcome</span> --}}
+                <a type="button" href="/users/logout" class="btn btn-outline-main btn-light" id="logout-button">
+                    Logout
+                </a>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header bg-main text-white">
+                <h4><strong>Events You Might Like</strong></h4>
+            </div>
+            <div class="card-body">
+                <div class="container-fluid">
+                    <h2>Popular Events</h2>
+                    <div class="row flex-nowrap">
+                        {{#each popular.event}}
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="{{this.url}}">
+                                <div class="card" style="width: 100%;">
+                                    {{#if this.image.medium}}
+                                    <img class="card-img-top " src={{this.image.medium.url}} alt="Card image cap">
+                                    {{else}}
+                                    <img class=" card-img-top"
+                                        src="https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_960_720.jpg"
+                                        alt="Card image cap" height=150>
+                                    {{/if}}
+                                    <div class="card-body card-img-body">
+                                        <h5 class="card-title">{{this.title}}</h5>
+                                        <p class="card-text">{{this.start_time:}}
+                                            {{this.venue_name}}: {{this.venue_address}}, {{this.city_name}} -
+                                            {{this.postal_code}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{#if music.event}}
+                    <h2>Music Events</h2>
+                    <div class="row flex-nowrap">
+                        {{#each music.event}}
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="{{this.url}}">
+                                <div class="card" style="width: 100%;">
+                                    {{#if this.image.medium}}
+                                    <img class="card-img-top " src={{this.image.medium.url}} alt="Card image cap">
+                                    {{else}}
+                                    <img class=" card-img-top"
+                                        src="https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_960_720.jpg"
+                                        alt="Card image cap" height=150>
+                                    {{/if}}
+                                    <div class="card-body card-img-body">
+                                        <h5 class="card-title">{{this.title}}</h5>
+                                        <p class="card-text">{{this.start_time:}}
+                                            {{this.venue_name}}: {{this.venue_address}}, {{this.city_name}} -
+                                            {{this.postal_code}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                    {{#if outdoor.event}}
+                    <h2>Outdoor Events</h2>
+                    <div class="row flex-nowrap">
+                        {{#each outdoor.event}}
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="{{this.url}}">
+                                <div class="card" style="width: 100%;">
+                                    {{#if this.image.medium}}
+                                    <img class="card-img-top " src={{this.image.medium.url}} alt="Card image cap">
+                                    {{else}}
+                                    <img class=" card-img-top"
+                                        src="https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_960_720.jpg"
+                                        alt="Card image cap" height=150>
+                                    {{/if}}
+                                    <div class="card-body card-img-body">
+                                        <h5 class="card-title">{{this.title}}</h5>
+                                        <p class="card-text">{{this.start_time:}}
+                                            {{this.venue_name}}: {{this.venue_address}}, {{this.city_name}} -
+                                            {{this.postal_code}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                    {{#if sports.event}}
+                    <h2>Sports Events</h2>
+                    <div class="row flex-nowrap">
+                        {{#each sports.event}}
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <a href="{{this.url}}">
+                                <div class="card" style="width: 100%;">
+                                    {{#if this.image.medium}}
+                                    <img class="card-img-top " src={{this.image.medium.url}} alt="Card image cap">
+                                    {{else}}
+                                    <img class=" card-img-top"
+                                        src="https://cdn.pixabay.com/photo/2017/12/08/11/53/event-party-3005668_960_720.jpg"
+                                        alt="Card image cap" height=150>
+                                    {{/if}}
+                                    <div class="card-body card-img-body">
+                                        <h5 class="card-title">{{this.title}}</h5>
+                                        <p class="card-text">{{this.start_time:}}
+                                            {{this.venue_name}}: {{this.venue_address}}, {{this.city_name}} -
+                                            {{this.postal_code}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Button trigger modal -->
+
+
+</div>
+
+<script src="main.js"></script>
